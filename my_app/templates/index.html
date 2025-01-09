@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio-Marcia Moreira</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <!-- Slick CSS -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+<!--? Página 00 Menu Fixo -->
+    <header class="menu-fixo nav">
+        <nav class="nav-menu">
+            <a class="logo logo-MM" href="../static/images/logo.png"> >M_M< WEB </a>
+            <!-- Ícone de hambúrguer -->
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li class="dropdown">
+                    <a class="dropbtn" href="#pag_capa">Início</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="#pag_menu_curriculo">Currículo</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#pag_curriculo_skills">Skills</a></li>
+                        <li><a href="#pag_curriculo_experiencias">Experiências</a></li>
+                        <li><a href="#pag_curriculo_formacao">Formação</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="#pag_menu_portfolio">Portfólio</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#pag_portfolio_github">GitHub</a></li>
+                        <li><a href="#pag_portfolio_projetos">Projetos</a></li>
+                        <li><a href="#pag_curriculo_wakatime">WakaTime</a></li>
+                    </ul>
+                </li>                
+                <!-- Colocar com Acesso de Senha -->
+                <!-- Apresentação para Reunião de Clientes -->
+                <li class="dropdown">
+                    <a class="dropbtn" href="#">Freelancer</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="#pag_curriculo_contato">Contato</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="#Minhas_Paginas_Anotações_senha">Settings</a>
+                </li>
+                <!-- Botão tema claro ou escuro -->
+                <li class="dropdown">
+                    <div>
+                        <button class="nav-tema">Light</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- <main> -->
+<!--? Página 01 Capa -->
+<!--? Imagens da Capa Parallax estão no CSS -->
+    <section id="pag_capa" class="pag_capa clearfix">
+        <div class="parallax-img parallax-img_01">
+            <div class="msg_bloco_parallax">
+                <!-- links para curriculo -->
+                <a href="#pag_menu_curriculo">
+                    <h1>Marcia Moreira</h1>
+                    <h2> - Currículo - </h2>
+                    <a><i class="bi bi-arrow-down-circle-fill"></i></a>
+                    <!-- avaliar por seta para faixa abaixo -->
+                </a>
+            </div>
+        </div>
+        <div class="conteudo_faixa_central">
+            <div class="msg_faixa_central">
+                <!-- faixa preta com conteúdo -->
+                <div class="logo-MM">
+                    <h2> >M_M< </h2>
+                    <h3> WEB </h3>
+                    <h2 id="assinatura-logo"> by Marcia Moreira </h2>
+                </div>
+            </div>
+        </div>
+        <div class="parallax-img parallax-img_02">
+            <div class="msg_bloco_parallax">
+                <a href="#pag_menu_portfolio">
+                    <div class="logo-MM">
+                        <h2> >M_M< </h2>
+                        <h3> WEB </h3>
+                    </div>
+                    <h2> - Portfólio - </h2>
+                </a>
+            <!-- links para o portfólio -->
+            <!-- links para os principais projetos -->
+            </div>
+        </div>
+    </section>
+<!--? Página 02 Curriculo-Sobre -->
+    <section id="pag_menu_curriculo" class="pag_menu_curriculo page2 clearfix">
+        <div class="container">
+            <!-- Imagem: -->
+            <div class="bloco_esquerda card_sobre">
+                <h2>SOBRE</h2>
+                <!-- Minha Foto -->
+                <img id="foto-perfil" src="../static/images/imagem_01.png">
+                <!-- Minha Assinatura -->
+                <h2 id="assinatura">Marcia Moreira</h2>
+            </div>
+            <!-- Texto: -->
+            <div class="bloco_direita">
+                <!-- Minha Bio -->
+                <div id="texto-typewriter">
+                    <p>
+                        Olá!
+                    </p>
+                    <br>
+                    <p>
+                        Sou Marcia Moreira, Desenvolvedora de Sistemas especializada em Front e Back-end.
+                    </p>
+                    <br>
+                    <p>
+                        Há um ano e meio, realizei transição de carreira para a área de Tecnologia e desde então tenho me dedicado intensivamente ao estudo e à prática.
+                    </p>
+                    <br>
+                    <p>
+                        Estou cursando Engenharia de Software e participo ativamente de Bootcamps, cursos, imersões e projetos práticos para aprimorar minhas habilidades. 
+                    </p>
+                    <br>
+                    <p>
+                        Atualmente, trabalho de forma autônoma, prestando serviços através de plataformas de freelancer, além de atender clientes de forma independente e pro bono. 
+                    </p>
+                    <br>
+                    <p>
+                        Minha experiência prévia em Humanas e na área Comercial, combinada com minha graduação em Administração de Empresas e pós-graduação em Negociação e Vendas, me proporciona uma visão ampla e estratégica no desenvolvimento de soluções tecnológicas e no atendimento qualificado aos clientes.
+                    </p>
+                    <br>
+                    <p>
+                        Estou sempre em busca de novos desafios e oportunidades para aplicar meus conhecimentos e contribuir com projetos inovadores.
+                    </p>
+                    <!-- Teste de Aptidão Tech - Resolução de Case - Coding Tank - Desafios -->
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
+<!--? Página 03 Skills-Badges-->
+    <section id="pag_curriculo_skills" class="pag_curriculo_skills clearfix">
+        <div class="badges">
+            <div>
+                <!-- <h2>Página 03</h2> -->
+                <h2>- SKILLS -</h2>
+            </div>
+            <!-- Site para baixar o SVG dos Icons das linguagens que você queira: -->
+            <!-- https://devicon.dev/ -->
+<!-- ### Linguagens: -->
+            <div class="container-badges">
+                <div class="bloco-linguagem">
+                    <h3>- Linguagens -</h3>
+                    <div class="badge-container">
+                        <img alt="MM-Js" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+                        <span class="tooltip">JavaScript</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-Py" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original-wordmark.svg">
+                        <span class="tooltip">Python</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-C" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/c/c-line.svg">
+                        <span class="tooltip">C</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-C#" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-line.svg">
+                        <span class="tooltip">C#</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-PowerShell" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/powershell/powershell-original.svg">
+                        <span class="tooltip">PowerShell</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-Html" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-plain-wordmark.svg">
+                        <span class="tooltip">HTML5</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-CSS" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg">
+                        <span class="tooltip">CSS</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-MarkDounw" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg">
+                        <span class="tooltip">Markdown</span>
+                    </div>
+                </div>
+            </div>
+<!-- ### Frameworks: -->
+<!-- https://devicon.dev/ -->
+<!-- React e Next.js -->
+            <div class="container-badges">
+                <div class="bloco-framework">
+                    <h3>- FrameWorks -</h3>
+                    <div class="badge-container">
+                        <img alt="MM-Next" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg">
+                        <span class="tooltip">React</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-Next.js" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg">
+                        <span class="tooltip">Next.js</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-NodeJS" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg">
+                        <span class="tooltip">NodeJS</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-DJango" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain-wordmark.svg">
+                        <span class="tooltip">Django</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-BootStrap" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original-wordmark.svg">
+                        <span class="tooltip">BootStrap</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-Flask" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original-wordmark.svg"> 
+                        <span class="tooltip">Flask</span>
+                    </div>
+                </div>
+            </div>
+<!-- ### Banco de Dados: -->
+<!-- https://devicon.dev/ -->
+            <div class="container-badges">
+                <div class="bloco-banco_de_dados">
+                    <h3>- Banco de Dados -</h3>
+                    <div class="badge-container">
+                        <img alt="MM-MySQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg">
+                        <span class="tooltip">MySQL</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-PostgreSQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain-wordmark.svg">
+                        <span class="tooltip">PostgreSQL</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-MongoDB" src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white">
+                        <span class="tooltip">MongoDB</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-SQLServer" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain-wordmark.svg">
+                        <span class="tooltip">SQLServer</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-SQLite" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/sqlite/sqlite-original-wordmark.svg">
+                        <span class="tooltip">SQLite</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-dbeaver" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dbeaver/dbeaver-original.svg">
+                        <span class="tooltip">Dbeaber</span>
+                    </div>
+                </div>
+            </div>
+<!-- ### Versionadores: -->
+<!-- https://devicon.dev/ -->
+            <div class="container-badges">
+                <div class="bloco-versionadores">
+                    <h3>- Versionadores -</h3>
+                    <div class="badge-container">
+                        <img alt="MM-Git" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-plain-wordmark.svg">
+                        <span class="tooltip">Git</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-GitHub" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg">
+                        <span class="tooltip">GitHub</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-GitLab" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/gitlab/gitlab-original-wordmark.svg">
+                        <span class="tooltip">GitLab</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-GitHubPages"  src="https://img.shields.io/badge/github%20pages-121013?style=for-the-badge&logo=github&logoColor=white">
+                        <span class="tooltip">GitHubPages</span>
+                    </div>
+                </div>
+            </div>
+<!-- ### IDE's / Ferramentas Diversas: -->
+<!-- https://devicon.dev/ -->
+            <div class="container-badges">
+                <div class="bloco-ferramentas">
+                    <h3>- IDE's - Ferramentas Diversas -</h3>
+                    <div class="badge-container">
+                        <img alt="MM-VsCode" src="https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white">
+                        <span class="tooltip">VsCode</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-Eclipse" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original-wordmark.svg">
+                        <span class="tooltip">Eclipse</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-npm" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg"/>
+                        <span class="tooltip">npm</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-Slack" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/slack/slack-original.svg"/>
+                        <span class="tooltip">Slack</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-Canva" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/canva/canva-original.svg"/>
+                        <span class="tooltip">Canva</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-Figma" src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white">
+                        <span class="tooltip">Figma</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-Trello" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/trello/trello-plain-wordmark.svg"/>
+                        <span class="tooltip">Trello</span>
+                    </div>
+                    <div class="badge-container">
+                        <img alt="MM-Postman" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"/>
+                        <span class="tooltip">Postman</span>
+                    </div>
+                <!-- Padrão Para Badges com Pop Up: -->
+                <!-- 
+                   <div class="badge-container">
+                        <span class="tooltip">teste</span>
+                    </div>
+                    <div class="badge-container">
+                        <span class="tooltip">teste</span>
+                    </div>
+                    <div class="badge-container">
+                        <span class="tooltip">teste</span>
+                    </div>                    
+                -->                    
+                </div>
+            </div>
+        </div>
+<!--? Apagar por enquanto: -->
+        <div>
+            <!-- sobre >M_M< - CNPJ -->
+            <!-- Colocar Badges? -->
+            <p>
+                <!-- Habilidades: -->
+            </p>
+            <p>
+                <!-- Front End - Html, CSS, JavaScript, React, NodeJS, Bootstrap e Markdown. -->
+            </p>
+            <p>
+                <!-- Back End - Python, Django, C, C# e Java. -->
+            </p>
+            <p>
+                <!-- Banco de Dados SQL - MySQL, SQLite, PostgreSQL e SQL Server -->
+            </p>
+            <p>
+                <!-- Versionadores - Git e GitHub -->
+            </p>
+            <p>
+                <!-- Rever... -->
+            </p>
+        </div>
+    </section>
+<!--? Página 04 WakaTime -->
+    <section id="pag_curriculo_wakatime" class="pag_curriculo_wakatime clearfix">
+        <!-- WakaTime -->
+        <div class="wakatime">
+            <!--! Verificar Centralização CSS INLINE -->
+            <div id="badge-wakatime" style="display: inline_block" align="center">
+                <h3> - DESEMPENHO CODANDO - </h3>
+                <h5> (Contabilizado desde 01/12/2023) </h5>
+                <!-- WakaTime Badges: -->
+                <!-- https://wakatime.com/@Marcia_Moreira -->
+                <a href="https://wakatime.com/@Marcia_Moreira" alt="WakaTime" target="_blank"><img src="https://wakatime.com/badge/user/018c270f-a496-4f2e-a75f-a068fd08050f.svg?style=social)(https://wakatime.com/@018c270f-a496-4f2e-a75f-a068fd08050f&theme=moltack)" target="_blank"></a>
+                <br>
+                <br>
+            </div>
+            <!--! Verificar Centralização CSS INLINE -->
+            <div id="indices-wakatime" style="display: inline_block" align="center">
+                <!-- WakaTime Tabela Stats: -->
+                <!-- https://wakatime.com/@Marcia_Moreira -->
+                <a href="https://wakatime.com/@Marcia_Moreira" target="_blank">
+                    <img alt="Harlok's WakaTime stats" src="https://github-readme-stats.vercel.app/api/wakatime?username=Marcia_Moreira&background=#e8c39e](https://github.com/marcia-moreira/github-readme-stats"/>
+                </a>
+            </div>
+        </div>
+    </section>
+<!--? Página 05 Experiências -->
+    <section id="pag_curriculo_experiencias" class="pag_curriculo_experiencias clearfix">
+        <div>
+            <!-- serviços relacionados-->
+            <!-- breve relato sobre experiências passadas -->
+            <h2>Página 05</h2>
+            <h2>Experiências:</h2>
+            -
+            <br>
+            <h2>Cursos</h2>
+            - Senac = Programador de Sistemas (6 meses - 2023)
+            <br>
+            - Senac = Desenvolvedor Front End (4 meses - 2023)
+            <br>
+            - PrograMaria = Minha Primeira API (2 meses - 2024)
+            <br>
+            - PrograMaria = Meu primeiro Site Responsivo (2 meses - 2024)
+            <br>
+            - Escola Korú = Desenvolvedor Full-Stack (6 meses - 2024)
+            <br>
+            <h2>Bootcamps</h2>
+            - WoMakersCode = Back-End Python e Django (Tester/ Orientação a Objetos)
+            <br>
+            - Alura = JavaScript, HTML, CSS, Java (6 meses - 2023)
+            <br>
+            - Santander e Dio.me = Python e Data Analits
+            <br>
+            - Santander e Dio.me = Nuvem...
+            <br>
+            <h2>Desafios</h2>
+            - 42 SP = Imersão Pisciner (27 dias / 160 horas - 2023)
+            <br>
+            - 42 SP = Missão Front-End (40 horas - 2024)
+            <br>  
+        </div>
+    </section>
+<!--? Página 06 A usar -->
+    <section id="#" class="clearfix">
+        <div>
+            <!-- mapa da zona oeste -->
+            <!-- Pin Onde me Encontrar -->
+            <!-- linkedin -->
+            <!-- whats -->
+            <!-- e-mail -->
+            <h2>Página 06</h2>
+            <h2>Instituições onde Estudei:</h2>
+            <p>
+                <!-- ver modelo site minas pretas - clientes e parceiros -->
+                <!-- https://www.uxparaminaspretas.com.br/ -->
+                <!-- Uma linha : Instituições de Formação -->
+                <!-- Fazer uma div com as logos das instituições estudadas -->
+                <!-- 42 São Paulo / Minas Pretas / Dio.me / Alura / Senac / PrograMaria / WoMakersCode / Escola Korú -->
+            </p>
+        </div>
+    </section>
+<!--? Página 07 Portifólio -->
+<!--? Meu Portfólio de 1 em 1 imagem -->
+    <section id="pag_menu_portfolio" class="portfolio pag_menu_portfolio clearfix">
+        <h2>Página 07 - Carossel de Portfólio</h2>
+        <h2>Meu Portfólio</h2>
+        <div class="portfolio-carousel_1img">
+            <div class="portfolio-item_1img">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <!-- <img src="path/to/carrossel_img_01.png" alt="Imagem 1"> -->
+                    <img src="../static/images/carrossel/carrossel_img_01.png" alt="Imagem 1">
+                    <div class="item-text_1img">Descrição da Imagem 1</div>
+                </a>
+            </div>
+            <div class="portfolio-item_1img">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_02.jpg" alt="Imagem 2">
+                    <div class="item-text_1img">Descrição da Imagem 2</div>
+                </a>
+            </div>
+            <div class="portfolio-item_1img">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_03.jpeg" alt="Imagem 3">
+                    <div class="item-text_1img">Descrição da Imagem 3</div>
+                </a>
+            </div>
+            <div class="portfolio-item_1img">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_01.png" alt="Imagem 4">
+                    <div class="item-text_1img">Descrição da Imagem 4</div>
+                </a>
+            </div>
+            <div class="portfolio-item_1img">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_02.jpg" alt="Imagem 5">
+                    <div class="item-text_1img">Descrição da Imagem 5</div>
+                </a>
+            </div>
+            <div class="portfolio-item_1img">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_03.jpeg" alt="Imagem 6">
+                    <div class="item-text_1img">Descrição da Imagem 6</div>
+                </a>
+            </div>
+        </div>
+            <!-- subcapa com menu para portfolio -->
+            <!-- Implantar um carrossel de projetos links -->
+            <!-- imagens projetos front -->
+            <!-- imagens projetos Banco de Dados -->
+            <!-- imagens projetos back django -->           
+    </section>
+<!--? Meu Portfólio de 3 em 3 imagens -->
+    <section class="portfolio pag_menu_portfolio clearfix">
+        <h2>Meu Portfólio</h2>
+        <div class="portfolio-carousel_3img">
+            <div class="portfolio-item_3img">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_01.png" alt="Imagem 1">
+                    <div class="item-text_3img">Descrição da Imagem 1</div>
+                </a>
+            </div>
+            <div class="portfolio-item_3img">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_02.jpg" alt="Imagem 2">
+                    <div class="item-text_3img">Descrição da Imagem 2</div>
+                </a>
+            </div>
+            <div class="portfolio-item_3img">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_03.jpeg" alt="Imagem 3">
+                    <div class="item-text_3img">Descrição da Imagem 3</div>
+                </a>
+            </div>
+            <div class="portfolio-item_3img">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_01.png" alt="Imagem 4">
+                    <div class="item-text_3img">Descrição da Imagem 4</div>
+                </a>
+            </div>
+            <div class="portfolio-item_3img">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_02.jpg" alt="Imagem 5">
+                    <div class="item-text_3img">Descrição da Imagem 5</div>
+                </a>
+            </div>
+            <div class="portfolio-item_3img">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_03.jpeg" alt="Imagem 6">
+                    <div class="item-text_3img">Descrição da Imagem 6</div>
+                </a>
+            </div>
+        </div>
+    </section>
+<!--? 3 imagens girando -->
+    <section class="portfolio pag_menu_portfolio clearfix">
+    <!--? Meu Portfólio de 3 em 3 imagens girando para esquerda -->
+        <h2>Meu Portfólio</h2>
+        <div class="portfolio-carousel_3imgMov">
+            <div class="portfolio-item_3imgMov">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <div class="item-text_3imgMov">Descrição da Imagem 1</div>
+                    <img src="../static/images/carrossel/carrossel_img_01.png" alt="Imagem 1">
+                </a>
+            </div>
+            <div class="portfolio-item_3imgMov">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <div class="item-text_3imgMov">Descrição da Imagem 2</div>
+                    <img src="../static/images/carrossel/carrossel_img_02.jpg" alt="Imagem 2">
+                </a>
+            </div>
+            <div class="portfolio-item_3imgMov">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <div class="item-text_3imgMov">Descrição da Imagem 3</div>
+                    <img src="../static/images/carrossel/carrossel_img_03.jpeg" alt="Imagem 3">
+                </a>
+            </div>
+            <div class="portfolio-item_3imgMov">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <div class="item-text_3imgMov">Descrição da Imagem 4</div>
+                    <img src="../static/images/carrossel/carrossel_img_01.png" alt="Imagem 4">
+                </a>
+            </div>
+            <div class="portfolio-item_3imgMov">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <div class="item-text_3imgMov">Descrição da Imagem 5</div>
+                    <img src="../static/images/carrossel/carrossel_img_02.jpg" alt="Imagem 5">
+                </a>
+            </div>
+            <div class="portfolio-item_3imgMov">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <div class="item-text_3imgMov">Descrição da Imagem 6</div>
+                    <img src="../static/images/carrossel/carrossel_img_03.jpeg" alt="Imagem 6">
+                </a>
+            </div>        
+        </div>
+    <!--? Meu Portfólio de 3 em 3 imagens girando para direita -->
+        <!-- <h2>Meu Porfólio Direita</h2> -->
+        <div class="portfolio-carousel_3imgMovDir">
+            <div class="portfolio-item_3imgMovDir">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_01.png" alt="Imagem 1">
+                    <div class="item-text_3imgMovDir">Descrição da Imagem 1</div>
+                </a>
+            </div>
+            <div class="portfolio-item_3imgMovDir">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_02.jpg" alt="Imagem 2">
+                    <div class="item-text_3imgMovDir">Descrição da Imagem 2</div>
+                </a>
+            </div>
+            <div class="portfolio-item_3imgMovDir">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_03.jpeg" alt="Imagem 3">
+                    <div class="item-text_3imgMovDir">Descrição da Imagem 3</div>
+                </a>
+            </div>
+            <div class="portfolio-item_3imgMovDir">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_01.png" alt="Imagem 4">
+                    <div class="item-text_3imgMovDir">Descrição da Imagem 4</div>
+                </a>
+            </div>
+            <div class="portfolio-item_3imgMovDir">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_02.jpg" alt="Imagem 5">
+                    <div class="item-text_3imgMovDir">Descrição da Imagem 5</div>
+                </a>
+            </div>
+            <div class="portfolio-item_3imgMovDir">
+                <a href="https://github.com/Marcia-Moreira/ProjetoFinal_SquadAmeenahGuribFakim" target="_blank" alt="Meu GitHub">
+                    <img src="../static/images/carrossel/carrossel_img_03.jpeg" alt="Imagem 6">
+                    <div class="item-text_3imgMovDir">Descrição da Imagem 6</div>
+                </a>
+            </div>
+        </div>
+    </section>
+<!--? Página 08 Portfólio Linkedin-->
+    <section id="pag_portfolio_github" class="pag_portfolio_github clearfix">
+        <div>
+            <!-- links para portfólios/codigos do linkedin -->
+            <h2>Página 08</h2>
+            <h2>Portfólio GitHub:</h2>
+        </div>
+    </section>
+<!--? Página 09 Portfólio Link Deploy -->
+    <section id="pag_portfolio_projetos" class="pag_portfolio_projetos clearfix">
+        <div>
+            <!-- prints ou links para projetos - Deploy -->
+            <h2>Página 09</h2>
+            <h2>Portfólio Projetos: DEPLOY</h2>
+            <div class="bloco-link_deploy">
+                <a href="https://marcia-moreira.github.io/Challange_01-WoMakersCode-Intro_Star_Wars_MM/" alt="Minha_Pagina" target="_blank"><h2>Intro Star Wars</h2></a>
+                <h4>[ HTML-CSS-JavaScript ]</h4>
+            </div>
+        </div>
+    </section>
+<!--? Página 10 Formulário Fale Comigo -->
+    <section id="pag_deixe_seu_contato" class="pag_formulario clearfix">
+        <div class="interface-formulario">
+            <h2 class="titulo-formulario">fale <span>COMIGO.</span></h2>
+            <form action="">
+                <!-- Alt+Shift+SetaParaBaixo=copia o selecionado -->
+                <input type="text" name="nome" id="" placeholder="Seu nome completo:" required>
+                <input type="email" name="email" id="" placeholder="Seu e-mail:" required>
+                <input type="text" name="celular" id="" placeholder="Seu celular:">
+                <textarea name="mensagem" id="" placeholder="Digite sua mensagem:" required></textarea>
+                <!-- O botão precisa ser Input para enviar dados -->
+                <div class="btn-enviar"><input type="submit" value="Enviar"></div>
+            </form>
+        </div>
+            <!-- Vídeo - Fale Comigo -->
+            <!-- https://youtu.be/6w1fYjVoxps?si=8r4GhcIHKH8397a7 -->
+            <!-- links para portfólios/codigos do linkedin -->
+            <!-- <h2>Página 10</h2> -->
+            <!-- <h2>Deixe seu contato:</h2> -->
+            <!-- Formulario com Banco de Dados MongoDB-Python e CRUD -->
+            <!-- Contato -->
+            <!-- Nome -->
+            <!-- Função/Cargo -->
+            <!-- Tel / WhatsApp -->
+            <!-- e-mail para Proposta -->
+            <!-- Disponibilidade de Reunião por link -->
+            <!-- Fazer alguma parte que tenha o vídeo do youtube de apresentação -->
+            <!-- Algum gif sobre eu trabalhando ou coisas aleatórias que eu faço -->
+    </section>
+<!--? Página 11 Meus Contatos -->
+<!--! Rever pois mudei o sentido  -->
+    <section id="pag_curriculo_contato" class="pag_curriculo_contato clearfix">
+        <div class="conteudo_faixa_central">
+            <div class="msg_faixa_central">
+                <!-- faixa preta com conteúdo -->
+                <!-- pôr links contatos -->
+                <h2>Contate-me:</h2>
+                <!-- ver como colocar seta induzindo arrastar para baixo ou rolar automaticamente após x tempo -->
+                <table>
+                    <tr class="social-row">
+                        <td>
+                            <a href="https://github.com/Marcia-Moreira" target="_blank"><img class="social-icon" src="../static/images/icon-github.png" alt="GitHub"></a>
+                            <a href="https://wa.me/5511977219430" target="_blank"><img class="social-icon" src="../static/images/icon-whatsapp.png" alt="WhatsApp"></a>
+                            <a href="https://www.linkedin.com/in/idmarciamoreira" target="_blank"><img class="social-icon" src="../static/images/icon-linkedin.png" alt="LinkedIn"></a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div>
+            <!-- mapa da zona oeste -->
+            <!-- Pin Onde me Encontrar -->
+            <!-- linkedin -->
+            <!-- whats -->
+            <!-- e-mail -->
+            <h2>Página 06</h2>
+            <h2>Contatos:</h2>
+            <p>
+                Meu GitHub | Portifólio:
+                https://github.com/Marcia-Moreira
+                
+                Meu LinkedIn:
+                https://www.linkedin.com/in/idmarciamoreira
+            </p>
+        </div>
+    </section>
+    <!-- </main> -->
+<!--? Página 12 Footer Móvel -->
+    <footer id="site-footer">
+        <!-- https://youtu.be/45zcTFNgtmw?si=z7synIq2VFhizgoa -->
+        <!-- rodapé Móvel -->
+        <div class="assinatura-MM">
+            <a href="https://wa.me/5511977219430" target="_blank">
+                <p><strong> >M_M< </strong></p>
+                <p><strong> WEB </strong></p>
+                <!-- <p> Projetos de Desenvolvimento Web </p> -->
+                <!-- <p> Marcia Moreira - Full Stack Developer </p> -->
+                <p> &copysr; 2024 - All Rights Reserved - </p>
+            </a>
+        </div>
+    </footer>
+<!--? Página 12 Footer FIXO -->
+    <footer id="fixo-footer">
+        <!-- rodapé FIXO -->
+        <div class="assinatura-MM">
+            <a href="https://wa.me/5511977219430" target="_blank">
+                <p><strong> >M_M< </strong></p>
+                <p><strong> WEB </strong></p>
+                <!-- <p> Projetos de Desenvolvimento Web </p> -->
+                <!-- <p> Marcia Moreira - Full Stack Developer </p> -->
+                <p> &copysr; 2024 - All Rights Reserved - </p>
+            </a>
+        </div>
+    </footer>
+<!--? Script JavaScript -->
+<!-- Slick JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<!-- Seu arquivo JS externo -->
+<script type="text/javascript" src="../static/js/script-main.js"></script>
+<script type="text/javascript" src="../static/js/script-menu.js"></script>
+<script tupe="text/javascript" src="../static/js/script-submenu.js"></script>
+<script type="text/javascript" src="../static/js/script-theme.js"></script>
+
+</body>
+</html>

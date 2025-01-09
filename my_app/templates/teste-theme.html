@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca de Tema</title>
+    <style>
+        /* Paleta de Cores para Temas: */
+        :root {
+            --bg-black: black;
+            --bg-white: white;
+            --bg-fantasy_01: #a04a67;
+            --bg-fantasy_02: #A52A2A;
+            --bg-image-white: white;
+            --bg-image-black: black;
+            --font-black: black;
+            --font-white: white;
+            --font-fantasy_01: #a04a67;
+            --font-fantasy_02: #A52A2A;
+            --btn-bg-black: black;
+            --btn-bg-white: white;
+            --btn-bg-fantasy_01: #a04a67;
+            --btn-bg-fantasy_02: #A52A2A;
+            --btn-font-black: black;
+            --btn-font-white: white;
+            --btn-font-fantasy_01: #a04a67;
+            --btn-font-fantasy_02: #A52A2A;
+            --shadow-black: black;
+            --shadow-white: white;
+            --shadow-fantasy_01: #a04a67;
+            --shadow-fantasy_02: #A52A2A;
+        }
+
+        .dark-theme {
+            /* Define Cores da Tela dentro do Tema Dark */
+            --theme-bg: var(--bg-black);
+            --theme-fontColor: var(--font-white);
+            --theme-btnBg: var(--btn-bg-black);
+            --theme-btnFontColor: var(--btn-font-white);
+            --theme-bordaShadow: var(--shadow-white);
+            --theme-bgImage: var(--bg-image-white);
+            /* Para Trocar a Cor Fantasy */
+            --theme-bgFantasy: var(--bg-fantasy_01);
+            --theme-fontFantasy: var(--font-fantasy_01);
+            --theme-btnBgFantasy: var(--btn-bg-fantasy_01);
+            --theme-btnFontFantasy: var(--btn-font-fantasy_01);
+            --theme-shadowFantasy: var(--shadow-fantasy_01);
+        }
+
+        .light-theme {
+            /* Define Cores da Tela dentro do Tema Light */
+            --theme-bg: var(--bg-white);
+            --theme-fontColor: var(--font-black);
+            --theme-btnBg: var(--btn-bg-white);
+            --theme-btnFontColor: var(--btn-font-black);
+            --theme-bordaShadow: var(--shadow-black);
+            --theme-bgImage: var(--bg-image-black);
+            /* Para Trocar a Cor Fantasy */
+            --theme-bgFantasy: var(--bg-fantasy_02);
+            --theme-fontFantasy: var(--font-fantasy_02);
+            --theme-btnBgFantasy: var(--btn-bg-fantasy_02);
+            --theme-btnFontFantasy: var(--btn-font-fantasy_02);
+            --theme-shadowFantasy: var(--shadow-fantasy_02);
+        }
+
+        body {
+            background-color: var(--theme-bg);
+            background-color: var(--theme-bgFantasy);
+            font-family: montserrat;
+            font-weight: 400;
+            font-style: normal;
+            letter-spacing: 1px;
+            color: var(--theme-fontColor);
+            text-decoration: none;
+        }
+
+        .menu-fixo {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: var(--theme-bg);
+            color: var(--theme-fontColor);
+            z-index: 1000; /* menu está acima de todos outros elementos */
+            padding: 20px 0;
+            box-shadow: 0 0 5px var(--theme-bordaShadow);
+            text-decoration: none;
+        }
+        .menu-fixo nav ul li a {
+            text-decoration: underline;
+            color: var(--theme-fontFantasy);
+            transition-duration: 0.3s;
+            text-decoration: none;
+        }
+        .menu-fixo nav ul li a:hover {
+            text-decoration: underline;
+            color: var(--theme-fontFantasy);
+            transition-duration: 0.3s;
+            text-decoration: none;
+        }
+
+        .nav-tema {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="dark-theme">
+    <!-- Página 00 Menu Fixo -->
+    <header class="menu-fixo nav">
+        <nav class="nav-menu">
+            <a class="logo logo-MM" href="../static/images/logo.png"> >M_M< </a>
+            <!-- Ícone de hambúrguer -->
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li class="dropdown">
+                    <a class="dropbtn" href="#pag_capa">Início</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropbtn" href="#pag_menu_curriculo">Currículo</a>
+                    <ul class="dropdown-content">
+                        <li><a href="#pag_curriculo_skills">Skills</a></li>
+                        <li><a href="#pag_curriculo_experiencias">Experiências</a></li>
+                        <li><a href="#pag_curriculo_formacao">Formação</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <button class="nav-tema">Light</button>
+        </nav>
+    </header>
+
+    <script>
+        //Configurar o modo estrito = Controle de erros
+        'use strict'; 
+
+        // Para Capturar o Click da Página = Evento Click
+        const switcher = document.querySelector('.nav-tema');
+
+        // Adicionar Manipulador do evento click = Ouvinte
+        switcher.addEventListener('click', function() {
+            document.body.classList.toggle('light-theme');
+            document.body.classList.toggle('dark-theme');
+
+            // Atualizar o Rótulo do Botão no click
+            const className = document.body.className;
+
+            if (className === "light-theme") {
+                document.body.className = "light-theme";
+                this.textContent = "Dark";
+            } else {
+                document.body.className = "dark-theme";
+                this.textContent = "Light";
+            }
+            // Chamada para console.log(Não aparece na Pag Web)
+            console.log("current class name: " + className)
+        });
+    </script>
+</body>
+</html>
+
+

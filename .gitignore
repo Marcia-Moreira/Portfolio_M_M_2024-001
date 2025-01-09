@@ -16,3 +16,24 @@ bin-release/
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
 # information for Eclipse / Flash Builder.
+
+.DS_Store
+.vscode
+__pycache__/
+venv/
+notes.md
+.venv/
+
+anotacoes_MM/
+
+anotacoes_diversas_MM
+
+templates_excluidos
+
+abrigo_ambiente
+
+anotacoes_MM/MM_Projeto-Menu_NavBar_CSSHtmlJS/
+MM_Projeto-Menu_NavBar_CSSHtmlJS/
+
+videos/
+*.mp4

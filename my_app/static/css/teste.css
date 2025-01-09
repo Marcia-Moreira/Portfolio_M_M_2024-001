@@ -1,0 +1,100 @@
+/*  */
+
+:root {
+    --body_background: black;
+    --borda_solida: whitesmoke;
+    --borda_shadow: whitesmoke;
+    --letra_padrao: aliceblue;
+    --letra_destaque: #FF7F50;
+    --cor_contraste_01: #FF7F50;
+    --btn_background: green;
+    --btn_border: green;
+    --btn_shadow:green;
+    /* usar com var(): background / color/ background-color/ background-image/ box-shadow / border */
+
+    /* Definição das variáveis de cor para o tema claro */
+    --light_bg-white: white;
+    --light_font-black: black;
+    --light_btn-bg-black: black;
+    --light_btn-font-white: white;
+    --light_shadow:white;
+    /* Definição das variáveis de cor para o tema escuro */
+    --dark_bg-black: black;
+    --dark_font-white: white;
+    --dark_btn-bg-white:white;
+    --dark_btn-font-black: black;
+    --dark_shadow:black;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #333;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-item > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #444;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item:hover > ul {
+    display: block;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Estilos para telas pequenas */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-item {
+        text-align: center;
+    }
+
+    .menu-item > ul {
+        position: static;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+}

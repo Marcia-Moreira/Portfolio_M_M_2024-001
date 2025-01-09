@@ -1,0 +1,951 @@
+/* ================================================ */
+/* CATÁLOGO DE CORES: */
+.paleta-de-cores {
+    background-color: black;
+    color: #a04a67;
+    background: #FF7F50;
+    
+}
+/* Paleta de Cores para Temas: */
+:root {
+    /* Revisão 28-06 para Thema Claro x Escuro*/
+    --bg-dark: black;
+    /* --bg-light: white; */
+    --bg-light: #f5f5f5;
+    --bg-fantasy_01:#FF7F50;
+    --bg-fantasy_02:#a04a67;
+    --bg-fantasy_03: #A52A2A;
+    /* --bg-image-dark: black; */
+    --bg-image-dark: #f5f5f5;
+    --bg-image-light: white;
+    --font-dark: black;
+    --font-light: white;
+    --font-fantasy_01: #FF7F50;
+    --font-fantasy_02: #a04a67;
+    --font-fantasy_03: #A52A2A;
+    --btn-bg-dark: black;
+    --btn-bg-light: white;
+    --btn-bg-fantasy_01:#FF7F50;
+    --btn-bg-fantasy_02:#a04a67;
+    --btn-bg-fantasy_03:#A52A2A;
+    --btn-font-dark: black;
+    --btn-font-light: white;
+    --btn-font-fantasy_01:#FF7F50;
+    --btn-font-fantasy_02:#a04a67;
+    --btn-font-fantasy_03:#A52A2A;
+    --shadow-dark:black;
+    --shadow-light:white;
+    --shadow-fantasy_01:#FF7F50;
+    --shadow-fantasy_02:#a04a67;
+    --shadow-fantasy_03:#A52A2A;
+    --translucent-dark: rgba(0, 0, 0, 0.8);
+    --translucent-darkGray: rgba(169, 169, 169, 0.8);
+    --translucent-light: rgba(211, 211, 211, 0.2);
+    --translucent-lightGray: rgba(211, 211, 211, 0.8);    
+}
+.dark-theme {
+    /* Define Cores da Tela dentro do Tema Dark */
+    --theme-bg: var(--bg-dark);
+    --theme-fontColor: var(--font-light);
+    --theme-btnBg: var(--btn-bg-dark);
+    --theme-btnFontColor: var(--btn-font-light);
+    --theme-bgFantasy: var(--bg-fantasy_01);
+    --theme-fontFantasy: var(--font-fantasy_01);
+    --theme-btnBgFantasy: var(--btn-bg-fantasy_01);
+    --theme-btnFontFantasy: var(--btn-font-fantasy_01);
+    --theme-shadowFantasy: var(--shadow-fantasy_01);
+    --theme-shadowDark: var(--shadow-dark);
+    --theme-shadowLight: var(--shadow-light);
+    --theme-shadow: var(--shadow-light);
+    --theme-bgImage: var(--bg-image-light);
+    --theme-translucent: var(--translucent-dark);
+    --theme-translucentDark: var(--translucent-dark);
+    --theme-translucentLight: var(--translucent-light);
+    --theme-translucentDarkGray: var(--translucent-darkGray);
+    --theme-translucentLightGray: var(--translucent-lightGray);
+}
+.light-theme {
+    /* Define Cores da Tela dentro do Tema Light */
+    --theme-bg: var(--bg-light);
+    --theme-fontColor: var(--font-dark);
+    --theme-btnBg: var(--btn-bg-light);
+    --theme-btnFontColor: var(--btn-font-dark);
+    --theme-bgFantasy: var(--bg-fantasy_02);
+    --theme-fontFantasy: var(--font-fantasy_02);
+    --theme-btnBgFantasy: var(--btn-bg-fantasy_02);
+    --theme-btnFontFantasy: var(--btn-font-fantasy_02);
+    --theme-shadowFantasy: var(--shadow-fantasy_02);
+    --theme-shadowDark: var(--shadow-dark);
+    --theme-shadowLight: var(--shadow-light);
+    --theme-shadow: var(--shadow-dark);
+    --theme-bgImage: var(--bg-image-dark);
+    --theme-translucent: var(--translucent-light);
+    --theme-translucentDark: var(--translucent-dark);
+    --theme-translucentLight: var(--translucent-light);
+     /* background-color:rgba(211, 211, 211, 0.2); */
+    --theme-translucentDarkGray: var(--translucent-darkGray);
+    --theme-translucentLightGray: var(--translucent-lightGray);
+}
+/* ================================================ */
+/* Fontes */
+/* Fonte Base e Fantasia-Estilo */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins :ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap ');
+
+/* ================================================ */
+/* PADRÕES GERAIS: */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body {
+    background-color: var(--theme-bg);
+    color: var(--theme-fontColor);
+    font-family: montserrat;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+main {
+    background-size: cover;
+}
+a {
+    text-decoration: none; 
+    color: inherit; /* Mantém a cor do texto do link igual à cor do texto circundante */
+    transition: 0.3s;
+}
+a:hover {
+    opacity: 0.7; /* ok */
+}
+a * {
+    text-decoration: none;
+}
+h1 {
+    color: var(--theme-fontFantasy);
+    font-size: 30px;
+}
+/* ================================================ */
+/* MENU FIXO: */
+.menu-fixo {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--theme-bg);
+    color: var(--theme-fontColor);
+    z-index: 1000; /* menu está acima de todos outros elementos */
+    padding: 20px 0;
+    box-shadow: 0 0 5px var(--theme-shadow);
+}
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: var(--theme-bg);
+    height: 5vh;
+}
+.menu-fixo nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.menu-fixo nav ul li {
+    margin: 0 15px;
+}
+.menu-fixo nav ul li a {
+    color: var(--theme-fontColor);
+    text-decoration: none;
+    font-weight: bold;
+}
+.menu-fixo nav ul li a:hover {
+    text-decoration: underline;
+    color: var(--theme-fontFantasy);
+    transition-duration: 0.3s;
+}
+/* Alterações para telas menores */
+/* (max-width: 768px) */
+/* Menor iPhone do Inspensionar */
+@media screen and (max-width: 375px) {
+    .menu-fixo nav ul {
+        display: none;
+    }
+    .menu-fixo nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+    .menu-fixo nav ul li a {
+        display: block;
+    }
+}
+/** REVER */
+/* ================================================ */
+/*! Teste menu e submenu com erro no hamburguer */
+/* ok */
+.nav-menu .nav-list > li {
+    position: relative;
+}
+/* ok */
+.nav-menu .nav-list > li > a {
+    display: block;
+    /* !se tiro o display block arruma o hamburguer mas bagunça o fixo */
+    text-align: center;
+    padding: 14px 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-decoration: none;
+}
+/* ok */
+.nav-menu .nav-list .dropdown-content {
+    display: none;
+    position: absolute;
+    /* background-color: var(--theme-translucent); */
+    background-color: var(--theme-bg);
+    border-radius: 0 0 10px 10px;
+    min-width: 160px;
+    box-shadow: -8px 18px 16px -8px var(--theme-shadow);
+    z-index: 1;
+    top: 100%;
+    left: 0;
+    padding-bottom: 10px;
+    transition: transform 0.3s ease; /* Suaviza a transição */ 
+}
+/* ok */
+.nav-menu .nav-list .dropdown-content li a {
+    color: var(--theme-fontFantasy);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+/* ok */
+.nav-menu .nav-list .dropdown-content li a:hover {
+    /*! rever a cor da transparencia branca */
+    /* background-color: #ddd; */
+    background-color: var(--translucent-lightGray);
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+/* ok */
+.nav-menu .nav-list li:hover .dropdown-content {
+    display: block;
+    /* sem esse não aparece sub menu */
+}
+
+/*! Teste */
+/* ================================================ */
+/** rever */
+/*! Não tem Logo Funcionando */
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+}
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+/* Constroi 0 Menu Hamburguer */
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: var(--theme-fontColor);
+    margin: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+/* Responsividade MENU para telas menores: */
+@media (max-width:999px) {
+    body {
+        overflow-x: hidden;
+        /* esconde o que transborda */
+    }
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0;
+        width: 40vw;
+        height: 92vh;
+        background: var(--theme-bg);
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+    .nav-list li {
+        margin-left: 0;
+        /* opacity: 0; */
+    }
+    .mobile-menu {
+        display: block;
+    }
+}
+.nav-list.active {
+    transform: translateX(0);
+    /* Para não cortar o X */
+    margin-top: 20px;
+}
+.nav-list.active li {
+    /* Distância entre linhas menu */
+    margin-top: 5px;
+}
+/*! DESCOBRIR O QUE ESTA ACONTECENDO AQUI */
+/* Keyframes: Fade-> surgindo devagar JS */
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+/* MOVIMENTO DOS TRAÇOS DO HAMBURGUER X = */
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+/* Estilo para o botão de alternância de tema */
+/*! Botão Thema Claro x Escuro */
+.nav-tema {
+    /* Muda a posição do botão */
+    /* position: absolute; */
+    /* left: 250px; */
+    /* Muda o Tamanho do Botão */
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--theme-fontColor);
+    background-color: var(--theme-bg);
+    box-shadow: 0 0 10px var(--theme-shadowFantasy);
+    cursor: pointer;
+    transition: .2s;
+}
+.nav-tema:hover{
+    color: var(--theme-fontFantasy);
+    font: bold;
+}
+/* ================================================ */
+/* SEÇÕES: */
+section {
+    padding-top: 60px; /* altura conforme menu fixo */
+    width: 100%;
+    margin: 0;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+    overflow: hidden; /* Contém elementos dentro do contêiner pai */
+}
+/* Aplica a todas as seções, exceto a primeira com a classe pag_capa */
+section:not(.pag_capa) {
+    min-height: 100vh; /* Cada seção ocupará pelo menos 100% da altura da janela de visualização */
+    display: flex;
+    flex-direction: column; /* Organiza as divs em coluna inicialmente */
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 0 0 5px var(--theme-shadowFantasy); */
+}
+/* Flexbox para organizar divs direita e esquerda */
+section:not(.pag_capa) .container {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+}
+/* Para organizar as divs da D e E: */
+.bloco_esquerda, .bloco_direita {
+    flex: 1; /* Faz com que cada div ocupe 50% do espaço disponível */
+    box-sizing: border-box;
+    padding: 30px;
+}
+/* Clearfix - para filhos não colapsar */
+.clearfix::after {
+    content: "";  /* Adiciona um conteúdo vazio após o elemento */
+    display: table;  /* Define o display como 'table' para criar um contexto de formatação de tabela */
+    clear: both;  /* Garante que os elementos flutuantes anteriores não afetem o elemento após este */
+}
+/* ================================================ */
+/* PÁGINA 01 - CORPO DA CAPA: */
+.pag_capa {
+    color: var(--theme-fontColor);
+}
+.parallax-img {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+.parallax-img_01 {
+    background-image: url('../images/imagem_01.png');
+}
+.parallax-img_02 {
+    background-image: url('../images/imagem_02.jpg');
+}
+.parallax-img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(3px); /* Ajuste o valor do desfoque conforme necessário */
+    z-index: 1;
+}
+.msg_bloco_parallax {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    text-shadow: 0px 0px 25px var(--font-light);
+    background-color: rgba(23, 25, 29, 0.7);
+    min-width: 100px;
+    padding: 15px;
+    z-index: 2; /* Certifique-se de que o texto esteja acima da camada de desfoque */
+    border-radius: 20px 0;
+    /* Sempre Branco: */
+    box-shadow: 0 0 25px var(--theme-shadowLight);
+}
+.conteudo_faixa_central {
+    background-color: var(--theme-bg);
+    color: var(--theme-fontColor);
+    padding: 50px 0;
+    text-align: center;
+}
+.msg_faixa_central {
+    max-width: 600px;
+    margin: 0 auto;
+    cursor: pointer;
+    color: var(--theme-fontFantasy);
+}
+/* ================================================ */
+/*! REVER: */
+table {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+table img {
+    width: 35px;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 20px;
+    box-shadow: 0 0 25px var(--theme-shadowFantasy);
+}
+/* ================================================ */
+/* PÁGINA ASSINATURAS */
+/* Foto do Sobre: */
+#foto-perfil {
+    width: 300px;
+    height: auto;
+    border-radius: 30%;
+    border: 2px solid;
+    box-shadow: 0 0 25px var(--theme-shadowFantasy);
+}
+/* Assinatura do Sobre: */
+#assinatura {
+    font-size: 40px;
+    color: var(--theme-fontColor);
+    font-family: 'Dancing Script', cursive;
+    font-style: italic;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+/* Faixa Central do Parallax e menu fixo*/
+.logo-MM {
+    color: var(--theme-fontFantasy);
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: bold;
+    letter-spacing: 1px;
+    line-height: 0.5;
+}
+/* Faixa Central do Parallax */
+#assinatura-logo {
+    color: var(--theme-fontColor);
+    font-family: 'Dancing Script', cursive;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: bold;
+    /* font-weight: 700; */
+    letter-spacing: 3px;   
+}
+/* ================================================ */
+/* PÁGINA 02 - SOBRE */
+.pag_menu_curriculo .container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens sejam movidos para a próxima linha conforme necessário */
+    gap: 25px; /* Adiciona espaço entre os blocos */
+}
+.bloco_esquerda, .bloco_direita {
+    box-sizing: border-box;
+    padding: 20px;
+}
+.bloco_esquerda {
+    flex: 0 0 300px; /* Define a largura fixa de 300px */
+    max-width: 300px; /* Largura máxima para a imagem do perfil */
+    text-align: center;
+}
+.bloco_direita {
+    flex: 1; /* O bloco da direita ocupará o restante do espaço disponível */
+    margin-left: 20px;
+}
+/* Media queries para ajuste em telas menores */
+@media (max-width: 768px) {
+    .pag_menu_curriculo .container {
+        flex-direction: column;
+        align-items: center; /* Centraliza os blocos em telas pequenas */
+    }
+    .bloco_esquerda, .bloco_direita {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-left: 0; 
+        /* Remove a margem em telas menores */
+        padding: 0 20px;
+    }
+    .bloco_esquerda {
+        order: 1; /* Mantém a ordem da esquerda para direita */
+        text-align: center; /* Centraliza o texto e imagem no bloco da esquerda */
+    }
+    .bloco_direita {
+        order: 2;
+        text-align: justify; /* Justifica o texto no bloco da direita */
+        padding-bottom: 30px;
+    }
+}
+/*! Verificar se consigo Implementar que o texto se espalhe por baixo da foto ocupando espaçodeisponível */
+
+/* ================================================ */
+/* PÁGINA 03 - SKILLS */
+.badges {
+    padding: 20px 50px;
+    box-shadow: 0 0 5px var(--theme-shadow);
+    text-align: center;
+    display: contents;
+    /* display: block; */
+    cursor: pointer;
+}
+.container-badges {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.bloco-linguagem,
+.bloco-framework,
+.bloco-banco_de_dados,
+.bloco-versionadores,
+.bloco-ferramentas {
+    box-shadow: 0 0 1px var(--theme-shadow);
+    background-color: var(--theme-translucent);
+    padding: 10px;
+    border-radius: 5px 0px;
+    margin: 10px; /*espaçamento entre blocos*/
+}
+.bloco-linguagem img,
+.bloco-framework img,
+.bloco-banco_de_dados img,
+.bloco-versionadores img,
+.bloco-ferramentas img {
+    height: 50px;
+    width: 50px;
+    margin: 15px;
+    padding: 10px;
+    /*! REVER IMG */
+    background-color: var(--theme-bgImage);
+    /*! Escolher um Tom para o Light */
+    box-shadow: 0 0 5px var(--theme-shadow);
+    /*! Escolher um Tom para o Light */
+    border-radius: 5px;
+    transition: transform 0.3s ease; /* Suaviza a transição */  
+}
+.bloco-linguagem img:hover,
+.bloco-framework img:hover,
+.bloco-banco_de_dados img:hover,
+.bloco-versionadores img:hover,
+.bloco-ferramentas img:hover {
+    transform: scale(1.08); /* Aumenta a imagem em 20% quando o mouse passa sobre ela */
+    box-shadow: none;    
+}
+/* Adicionando responsividade */
+@media (max-width: 768px) {
+    .container-badges {
+        justify-content: center; /* Centraliza os itens em telas menores */
+    }
+    .bloco-linguagem img,
+    .bloco-framework img,
+    .bloco-banco_de_dados img,
+    .bloco-versionadores img,
+    .bloco-ferramentas img {
+        margin: 10px; /* Ajusta o espaçamento em telas menores */
+    }
+}
+/* Estilo específico para imagem com largura maior */
+img[alt="MM-GitHubPages"],
+img[alt="MM-MongoDB"],
+img[alt="MM-VsCode"],
+img[alt="MM-Figma"] {
+    width: 85px !important; /* Define a largura maior para essas imagens */
+}
+/* Pop up das Badges: */
+.tooltip {
+    visibility: hidden; /* Oculta o pop-up inicialmente */
+    min-width: 50px;
+    background-color: #555555c9;
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 05px;
+    position: absolute;
+    bottom: 100%; /* Exibe acima da badge */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 1; /* Garante que o pop-up fique sobre outros elementos */
+}
+.badge-container {
+    position: relative;
+    display: inline-block;
+    margin-right: 05px; /* Adiciona espaçamento entre os badges */
+}
+.badge-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Animação Fade-In Pag 03: */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.6s ease-in-out forwards;
+}
+/* ================================================ */
+/* PÁGINA 04 - WAKATIME */
+.wakatime {
+    padding-bottom: 20px;
+    height: 50em;
+}
+#badge-wakatime img {
+   width: 300px;
+   height: 50px;
+   letter-spacing: 3px;
+   box-shadow: 0 0 10px var(--theme-shadow);
+   border-radius: 5px;
+   cursor: pointer;
+}
+#indices-wakatime {
+    color: #FF7F50;
+    /*! REver cor - Não funciona */
+    /*! Verificar o quadro quando está em tela de celular */
+}
+/* ================================================ */
+/* PÁGINA 05 - Experiências Empresas Parceiras */
+
+
+/* ================================================ */
+/* PÁGINA 06 */
+
+
+/* ================================================ */
+/* PÁGINA 07 */
+
+
+/* ================================================ */
+/* PÁGINA 00 */
+.bloco-link_deploy {
+    background-color: var(--theme-btnBg);
+}
+
+/* ================================================ */
+/* RESPONSIVIDADE TELAS MENORES: */
+@media (max-width: 600px) {
+    section .container {
+        /*! Não funciona */
+        padding: 10px;
+    }
+
+    .pag_menu_curriculo {
+        padding-bottom: 10px;
+    }
+    section:not(.pag_capa) .container {
+        flex-direction: column;
+    }
+    .bloco_direita, .bloco_esquerda {
+        flex: 100%; /* Faz com que as divs ocupem 100% do espaço disponível */
+        /* min-width: 100%;  */
+        /* Define uma largura mínima de 100% */
+    }
+}
+/* ================================================ */
+/* PÁGINA 06 */
+/* Carrosel Portifólio: */
+/*? Carrossel 1 imagem trocando de 1 em 1: */
+.portfolio-carousel_1img {
+    width: 80%;
+    margin: 0 auto;
+}
+.portfolio-carousel_1img img {
+    width: 100%;
+    max-width: 250px;
+    max-height: 150px;
+    min-height: 150px;
+    object-fit: cover; /* Mantém a proporção da imagem e cobre todo o espaço do contêiner */
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--theme-shadow);
+}
+.portfolio-carousel_1img .item-text_1img {
+    margin-top: 10px;
+    text-align: center;
+    /* color: var(--cor_contraste_01); */
+}
+/* ================================================ */
+/*? Carrossel 3 imagens trocando de 3 em 3: */
+.portfolio-carousel_3img {
+    width: 80%;
+    margin: 0 auto;
+}
+.portfolio-carousel_3img img {
+    width: 100%;
+    max-width: 250px;
+    max-height: 150px;
+    min-height: 150px;
+    object-fit: cover; /* Mantém a proporção da imagem e cobre todo o espaço do contêiner */
+    display: block;
+    margin: 15px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--theme-shadow);
+}
+.portfolio-carousel_3img .item-text_3img {
+    margin-top: 10px;
+    text-align: center;
+    color: var(--theme-fontColor);
+}
+/* ================================================ */
+/*? Carrossel 3 imagens girando para esquerda e direita lentamente: */
+.portfolio-carousel_3imgMov,
+.portfolio-carousel_3imgMovDir {
+    width: 80%;
+    margin: 0 auto;
+}
+.portfolio-carousel_3imgMov img,
+.portfolio-carousel_3imgMovDir img {
+    width: 100%;
+    max-width: 250px;
+    max-height: 150px;
+    min-height: 150px;
+    object-fit: cover; /* Mantém a proporção da imagem e cobre todo o espaço do contêiner */
+    display: block;
+    border-radius: 10px;
+    /* Sempre Branco: */
+    box-shadow: 0 0 10px var(--theme-shadowLight);
+    transition: transform 0.4s ease; /* Suaviza a transição */ 
+}
+.portfolio-carousel_3imgMov img:hover,
+.portfolio-carousel_3imgMovDir img:hover {
+    transform: scale(1.08); /* Aumenta a imagem em 20% quando o mouse passa sobre ela */
+    box-shadow: none;  
+}
+.portfolio-carousel_3imgMov .item-text_3imgMov,
+.portfolio-carousel_3imgMovDir .item-text_3imgMovDir {
+    margin-top: 10px;
+    text-align: center;
+    color: var(--theme-fontColor);
+    margin: 10px;
+}
+/* Espaçamento entre os itens */
+.portfolio-item_3imgMov,
+.portfolio-item_3imgMovDir {
+    padding: 15px; /* Adiciona espaçamento entre os itens */
+}
+/* Complemento para Direita - Biblioteca SLICK */
+/* Alteração: Define direções específicas para cada carrossel */
+.portfolio-carousel_3imgMov .slick-track {
+    display: flex !important;
+    flex-direction: row-reverse;
+    background-color: var(--theme-bgFantasy);
+}
+.portfolio-carousel_3imgMovDir .slick-track {
+    flex-direction: row !important;
+    background-color: var(--theme-bgFantasy);
+}
+.slick-list {
+    /* Garantir a direção do layout de esquerda para direita */
+    direction: ltr;
+    overflow: hidden; /* Garante que os itens fora da tela não sejam visíveis */
+}
+/* Fundo Colorido do BOTÃO do Carrossel 3 de 3: */
+.portfolio-carousel_3imgMov .slick-next,
+.portfolio-carousel_3imgMovDir .slick-next,
+.portfolio-carousel_3imgMov .slick-prev,
+.portfolio-carousel_3imgMovDir .slick-prev {
+    background: var(--theme-btnBgFantasy);
+    border-radius: 50%;
+    border: 2px solid var(--theme-btnBgFantasy);
+    cursor: pointer;
+}
+/* Hover do BOTÃO do Carrossel 3 de 3: */
+.portfolio-carousel_3imgMov .slick-next:hover,
+.portfolio-carousel_3imgMovDir .slick-next:hover,
+.portfolio-carousel_3imgMov .slick-prev:hover,
+.portfolio-carousel_3imgMovDir .slick-prev:hover {
+    border: 2px solid var(--theme-bgFantasy);
+    box-shadow: 0 0 10px var(--theme-shadow);
+}
+/* ================================================ */
+/* Página 00 */
+/* FORMULÁRIO Contato: */
+.interface-formulario {
+    padding: 80px 4%;
+}
+.titulo-formulario {
+    text-align: center;
+}
+.titulo-formulario span {
+    color: var(--theme-fontFantasy);
+}
+form {
+    max-width: 500px;
+    /* centrializar o form */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+    text-align: center;
+}
+form input,
+form textarea {
+    width: 100%;
+    background-color: #65656553;
+    /*! Escolher um Tom para o Light */
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: var(--theme-fontColor);
+    /*! Escolher um Tom para o Light */
+    font-size: 18px;
+}
+form input::placeholder,
+form textarea::placeholder {
+    /* color: var(--letra_padrao); */
+    color: rgba(245, 245, 245, 0.504);
+    /*! Escolher um Tom para o Light */
+}
+form textarea {
+    /* redmencionar o text area: */
+    /* para caixa de texto não quebrar o site */
+    resize: none;
+    max-height: 300px;
+}
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+/* para usar um tipo específico de input: */
+form .btn-enviar input[type=submit] {
+    width: 120px;
+    background-color: var(--theme-bgFantasy);
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+form .btn-enviar input[type=submit]:hover {
+    box-shadow: 0 0 8px var(--theme-shadow);
+    /*! Escolher um Tom para o Light */
+    transform: scale(1.05);
+}
+
+/* ================================================ */
+
+
+/* ================================================ */
+
+
+/* ================================================ */
+/* CONTATO: */
+.social-icon {
+    box-shadow: 0 8px 12px var(--theme-shadowFantasy);
+    transform: scale(1.09);
+}
+/* ================================================ */
+/* RODAPÉ: */
+#site-footer {
+    position: fixed;
+    bottom: -100px; /* Oculta o footer inicialmente fora da visualização */
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    background-color: var(--theme-bg);
+    color: var(--theme-fontColor);
+    box-shadow: 0 0 5px var(--theme-shadow);
+    transition: bottom 0.5s ease-in-out; /* Transição suave */
+    z-index: 1000;
+}
+#fixo-footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    background-color: var(--theme-bg);
+    color: var(--theme-fontColor);
+    box-shadow: 0 0 5px var(--theme-shadow);
+}
+.assinatura-MM {
+    margin-top: 15px;
+    transition-duration: 0.3s;
+    text-align: center;
+}
+.assinatura-MM:hover {
+    margin-top: 10px;
+    transform: scale(1.01);
+}
+.assinatura-MM a {
+    font-size: 10px;
+    color: var(--theme-fontColor);
+    transition-duration: 0.3s;
+    line-height: 0.2;
+    text-decoration: none;
+}
+.assinatura-MM:hover a {
+    transform: scale(0.09);
+    margin-top: 10px;
+    color: var(--theme-fontFantasy);
+}
+/* ================================================ */
